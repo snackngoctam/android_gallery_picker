@@ -33,7 +33,7 @@ class AndroidGalleryPickerPlugin: FlutterPlugin, MethodCallHandler, ActivityAwar
     if (call.method == "gallery") {
         activity.startActivityForResult(Intent(context, GalleryActivity::class.java), 105)
         UtilProject.result = result
-        UtilProject.colorAppBar = call.argument("colorAppBar")
+        UtilProject.colorAppBar = call.arguments()
     } else {
       result.notImplemented()
     }

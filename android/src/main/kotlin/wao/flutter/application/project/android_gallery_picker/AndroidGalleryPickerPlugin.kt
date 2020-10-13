@@ -33,6 +33,7 @@ class AndroidGalleryPickerPlugin: FlutterPlugin, MethodCallHandler, ActivityAwar
     if (call.method == "gallery") {
         activity.startActivityForResult(Intent(context, GalleryActivity::class.java), 105)
         UtilProject.result = result
+        UtilProject.colorAppBar = call.argument("colorAppBar")
     } else {
       result.notImplemented()
     }
@@ -58,9 +59,11 @@ class AndroidGalleryPickerPlugin: FlutterPlugin, MethodCallHandler, ActivityAwar
   }
 }
 object UtilProject {
+  var colorAppBar:String? = null
   var result: MethodChannel.Result? = null
 
   fun onDestroy() {
     result = null
+    colorAppBar = null
   }
 }

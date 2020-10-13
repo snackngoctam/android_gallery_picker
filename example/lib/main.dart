@@ -22,8 +22,8 @@ class _MyAppState extends State<MyApp> {
     super.initState();
   }
 
-  Future<File> _getImage() async {
-    image = await AndroidGalleryPicker.image;
+  _getImage() async {
+    image = await AndroidGalleryPicker.image();
     setState(() {});
   }
 

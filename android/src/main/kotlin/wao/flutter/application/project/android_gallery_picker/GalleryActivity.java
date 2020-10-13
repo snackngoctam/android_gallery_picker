@@ -40,7 +40,7 @@ public class GalleryActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery);
         getActionBar().setDisplayHomeAsUpEnabled(true);
-        getActionBar().setTitle("");
+        getActionBar().setTitle(UtilProject.INSTANCE.getTitleAppBar());
         getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor(UtilProject.INSTANCE.getColorAppBar())));
         GridView gallery = (GridView) findViewById(R.id.galleryGridView);
         gallery.setNumColumns(4);

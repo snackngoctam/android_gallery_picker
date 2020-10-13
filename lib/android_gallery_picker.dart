@@ -7,7 +7,8 @@ class AndroidGalleryPicker {
   static Future<File> image({String colorAppBar}) async {
     if (Platform.isAndroid) {
       String event = await MethodChannel("flutter.io/gallery")
-          .invokeMethod<String>('gallery', {"colorAppBar": colorAppBar});
+          .invokeMethod<String>(
+              'gallery', {"colorAppBar": colorAppBar ?? "#000000"});
       if (event == null) return null;
       return File(event);
     } else {

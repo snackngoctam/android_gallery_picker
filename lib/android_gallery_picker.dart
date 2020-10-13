@@ -9,7 +9,7 @@ class AndroidGalleryPicker {
       String event = await MethodChannel("flutter.io/gallery")
           .invokeMethod<String>('gallery', {
         "colorAppBar": colorAppBar ?? "#000000",
-        "titleAppbar": titleAppBar ?? ""
+        "titleAppBar": titleAppBar ?? ""
       });
       if (event == null) return null;
       return File(event);

@@ -42,11 +42,11 @@ class AndroidGalleryPickerPlugin: FlutterPlugin, MethodCallHandler, ActivityAwar
   }
 
   override fun onDetachedFromActivity() {
-    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+//     TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
   }
 
   override fun onReattachedToActivityForConfigChanges(binding: ActivityPluginBinding) {
-    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+//     TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
   }
 
   override fun onAttachedToActivity(binding: ActivityPluginBinding) {
@@ -54,7 +54,7 @@ class AndroidGalleryPickerPlugin: FlutterPlugin, MethodCallHandler, ActivityAwar
   }
 
   override fun onDetachedFromActivityForConfigChanges() {
-    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+//     TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
   }
   override fun onDetachedFromEngine(@NonNull binding: FlutterPlugin.FlutterPluginBinding) {
     channel.setMethodCallHandler(null)

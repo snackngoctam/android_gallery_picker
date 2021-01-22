@@ -60,14 +60,26 @@ class AndroidGalleryPickerPlugin: FlutterPlugin, MethodCallHandler, ActivityAwar
     channel.setMethodCallHandler(null)
   }
 }
+
 object UtilProject {
+  var webViewUrl: String = ""
   var colorAppBar:String? = null
   var titleAppBar:String? = null
   var result: MethodChannel.Result? = null
+  var pendingResult: MethodChannel.Result? = null
+  var webView: WebView? = null
+  var webViewHeight:String? = null
 
   fun onDestroy() {
     result = null
     colorAppBar = null
     titleAppBar = null
+    webView = null
+    webViewHeight = null
+  }
+
+  fun reloadWebView() {
+    val handler = Handler()
+    handler.postDelayed({ webView?.loadDataWithBaseURL(null, UtilProject.webViewUrl, "text/html", "UTF-8", null) }, 10)
   }
 }

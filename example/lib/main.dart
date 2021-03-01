@@ -23,7 +23,12 @@ class _MyAppState extends State<MyApp> {
   }
 
   _getImage() async {
-    image = await AndroidGalleryPicker.image();
+    List<File> images = await AndroidGalleryPicker.images();
+    if (images != null && images.length > 0) {
+      image = images.last;
+    } else {
+      image = null;
+    }
     setState(() {});
   }
 

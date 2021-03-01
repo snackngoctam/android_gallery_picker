@@ -36,8 +36,10 @@ class AndroidGalleryPickerPlugin: FlutterPlugin, MethodCallHandler, ActivityAwar
         activity.startActivityForResult(Intent(context, GalleryActivity::class.java), 105)
         UtilProject.result = result
         var obj:Map<String,String> = call.arguments()
-        UtilProject.titleAppBar = obj.get("titleAppBar")
-        UtilProject.colorAppBar = obj.get("colorAppBar")
+        UtilProject.multiPick = obj["multiPick"]
+        UtilProject.limitMultiPick = ((obj["limitMultiPick"] ?: error("3")).toInt())
+        UtilProject.titleAppBar = obj["titleAppBar"]
+        UtilProject.colorAppBar = obj["colorAppBar"]
     } else {
       result.notImplemented()
     }
@@ -67,6 +69,8 @@ object UtilProject {
   var webViewUrl: String = ""
   var colorAppBar:String? = null
   var titleAppBar:String? = null
+  var multiPick:String? = null
+  var limitMultiPick:Int = 3
   var result: MethodChannel.Result? = null
   var pendingResult: MethodChannel.Result? = null
   var webView: WebView? = null

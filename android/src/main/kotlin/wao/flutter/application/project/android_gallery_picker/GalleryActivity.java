@@ -14,8 +14,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -25,6 +27,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 
 import java.util.ArrayList;
 
@@ -34,7 +37,9 @@ import io.flutter.plugin.common.MethodChannel;
 public class GalleryActivity extends Activity {
     /** The images. */
     private ArrayList<String> images;
+    private ArrayList<String> multiImagesPicked;
     MethodChannel.Result methodChannelResult;
+    Button send_button;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,22 +47,52 @@ public class GalleryActivity extends Activity {
         getActionBar().setDisplayHomeAsUpEnabled(true);
         getActionBar().setTitle(UtilProject.INSTANCE.getTitleAppBar());
         getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor(UtilProject.INSTANCE.getColorAppBar())));
-        GridView gallery = (GridView) findViewById(R.id.galleryGridView);
+        final GridView gallery = (GridView) findViewById(R.id.galleryGridView);
         gallery.setNumColumns(4);
         gallery.setPadding(0,0,0,0);
         gallery.setHorizontalSpacing(5);
         gallery.setVerticalSpacing(5);
+        final ImageAdapter adapter = new ImageAdapter(this);
+        gallery.setAdapter(adapter);
 
-        gallery.setAdapter(new ImageAdapter(this));
-
+        send_button = (Button)findViewById(R.id.sendButton);
+        send_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UtilProject.INSTANCE.getResult().success(multiImagesPicked);
+                UtilProject.INSTANCE.onDestroy();
+                finish();
+            }
+        });
         gallery.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1,
                                     int position, long arg3) {
-                UtilProject.INSTANCE.getResult().success(images.get(position));
-                UtilProject.INSTANCE.onDestroy();
-                finish();
+                if(UtilProject.INSTANCE.getMultiPick().equals("false")) {
+                    UtilProject.INSTANCE.getResult().success(images.get(position));
+                    UtilProject.INSTANCE.onDestroy();
+                    finish();
+                }
+                else {
+                    if(multiImagesPicked == null) {
+                        multiImagesPicked = new ArrayList<String>();
+                    }
+                    if(multiImagesPicked.contains(images.get(position))) {
+                        multiImagesPicked.remove(images.get(position));
+                        adapter.notifyDataSetChanged();
+                    }
+                    else if (multiImagesPicked.size() < UtilProject.INSTANCE.getLimitMultiPick()){
+                        multiImagesPicked.add(images.get(position));
+                        adapter.notifyDataSetChanged();
+                    }
+                    if(multiImagesPicked.size() == 0) {
+                        send_button.setVisibility(View.GONE);
+                    }
+                    else {
+                        send_button.setVisibility(View.VISIBLE);
+                    }
+                }
             }
         });
 
@@ -126,10 +161,30 @@ public class GalleryActivity extends Activity {
                 picturesView = (ImageView) convertView;
             }
 
-            Glide.with(context).load(images.get(position))
-                    .placeholder(R.drawable.launch_background).centerCrop()
-                    .into(picturesView);
-
+            if(multiImagesPicked == null) {
+                multiImagesPicked = new ArrayList<String>();
+            }
+            if(multiImagesPicked.contains(images.get(position))) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    picturesView.setBackground(context.getDrawable(R.drawable.image_border));
+                }else{
+                    picturesView.setBackgroundResource(R.drawable.image_border);
+                }
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    picturesView.setForeground(context.getDrawable(R.drawable.image_overlay));
+                }
+            }
+            else {
+                picturesView.setBackground(null);
+                picturesView.setPadding(0,0,0,0);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    picturesView.setForeground(null);
+                }
+            }
+                Glide.with(context).load(images.get(position))
+                        .placeholder(R.drawable.launch_background
+                        ).centerCrop()
+                        .into(picturesView);
             return picturesView;
         }
 

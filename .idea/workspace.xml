@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6cc17ec4-c0b2-483d-b612-99272b6146a3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/arrow_image.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/check_image.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/image_border.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/image_overlay.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/wao/flutter/application/project/android_gallery_picker/AndroidGalleryPickerPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/wao/flutter/application/project/android_gallery_picker/AndroidGalleryPickerPlugin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/wao/flutter/application/project/android_gallery_picker/GalleryActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/wao/flutter/application/project/android_gallery_picker/GalleryActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/res/layout/activity_gallery.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/layout/activity_gallery.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/android_gallery_picker.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/android_gallery_picker.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,7 +25,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[ce081718c38bc824037e]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[R58MA5K7J5F]" />
   <component name="FindInProjectRecents">
     <findStrings>
       <find>android_gallery_picker</find>
@@ -29,6 +42,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KotlinMultiplatform">
+    <allAvailableExecutables />
   </component>
   <component name="ProjectId" id="1nPPsvNXH0qZK2vnkaT9ytw7mlF" />
   <component name="ProjectViewState">
@@ -57,5 +73,31 @@
       <updated>1602485343748</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="435" y="108" key="AndroidProcessChooserDialog" timestamp="1614575380950">
+      <screen x="0" y="25" width="1280" height="671" />
+    </state>
+    <state x="435" y="108" key="AndroidProcessChooserDialog/0.25.1280.671@0.25.1280.671" timestamp="1614575380950" />
+    <state width="442" height="458" key="DebuggerActiveHint" timestamp="1614574819075">
+      <screen x="0" y="25" width="1280" height="671" />
+    </state>
+    <state width="442" height="458" key="DebuggerActiveHint/0.25.1280.671@0.25.1280.671" timestamp="1614574819075" />
+    <state width="1238" height="210" key="GridCell.Tab.0.bottom" timestamp="1614580477044">
+      <screen x="0" y="25" width="1280" height="671" />
+    </state>
+    <state width="1238" height="210" key="GridCell.Tab.0.bottom/0.25.1280.671@0.25.1280.671" timestamp="1614580477044" />
+    <state width="1238" height="210" key="GridCell.Tab.0.center" timestamp="1614580477043">
+      <screen x="0" y="25" width="1280" height="671" />
+    </state>
+    <state width="1238" height="210" key="GridCell.Tab.0.center/0.25.1280.671@0.25.1280.671" timestamp="1614580477043" />
+    <state width="1238" height="210" key="GridCell.Tab.0.left" timestamp="1614580477042">
+      <screen x="0" y="25" width="1280" height="671" />
+    </state>
+    <state width="1238" height="210" key="GridCell.Tab.0.left/0.25.1280.671@0.25.1280.671" timestamp="1614580477042" />
+    <state width="1238" height="210" key="GridCell.Tab.0.right" timestamp="1614580477043">
+      <screen x="0" y="25" width="1280" height="671" />
+    </state>
+    <state width="1238" height="210" key="GridCell.Tab.0.right/0.25.1280.671@0.25.1280.671" timestamp="1614580477043" />
   </component>
 </project>

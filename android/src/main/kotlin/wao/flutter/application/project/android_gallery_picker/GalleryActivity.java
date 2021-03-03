@@ -10,6 +10,8 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.DisplayMetrics;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,7 +20,9 @@ import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -39,7 +43,7 @@ public class GalleryActivity extends Activity {
     private ArrayList<String> images;
     private ArrayList<String> multiImagesPicked;
     MethodChannel.Result methodChannelResult;
-    Button send_button;
+    ImageButton send_button;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,17 +59,31 @@ public class GalleryActivity extends Activity {
         final ImageAdapter adapter = new ImageAdapter(this);
         gallery.setAdapter(adapter);
 
-        send_button = (Button)findViewById(R.id.sendButton);
-        send_button.setOnClickListener(new View.OnClickListener() {
+        send_button= new ImageButton (this);
+        FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
+                FrameLayout.LayoutParams.WRAP_CONTENT,
+                FrameLayout.LayoutParams.WRAP_CONTENT);
+        params.gravity = Gravity.BOTTOM | Gravity.RIGHT;
+        params.setMargins(0,0,10,10);
+        send_button.setRotationY(180);
+        send_button.setVisibility(View.GONE);
+        DisplayMetrics metrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        send_button.setMinimumHeight(metrics.widthPixels / (6));
+        send_button.setMinimumWidth(metrics.widthPixels/ (6));
+        send_button.setScaleType(ImageView.ScaleType.FIT_XY);
+        send_button.setBackgroundResource(R.drawable.arrow_image);
+        addContentView(send_button, params);
+        send_button.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {
                 UtilProject.INSTANCE.getResult().success(multiImagesPicked);
                 UtilProject.INSTANCE.onDestroy();
                 finish();
             }
+
         });
         gallery.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1,
                                     int position, long arg3) {

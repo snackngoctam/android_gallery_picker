@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6cc17ec4-c0b2-483d-b612-99272b6146a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/arrow_image.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/check_image.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/image_border.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/src/main/res/drawable/image_overlay.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/wao/flutter/application/project/android_gallery_picker/AndroidGalleryPickerPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/wao/flutter/application/project/android_gallery_picker/AndroidGalleryPickerPlugin.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/wao/flutter/application/project/android_gallery_picker/GalleryActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/wao/flutter/application/project/android_gallery_picker/GalleryActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/src/main/res/layout/activity_gallery.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/layout/activity_gallery.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/android_gallery_picker.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/android_gallery_picker.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,21 +73,25 @@
       <screen x="0" y="25" width="1280" height="671" />
     </state>
     <state width="442" height="458" key="DebuggerActiveHint/0.25.1280.671@0.25.1280.671" timestamp="1614574819075" />
-    <state width="1238" height="210" key="GridCell.Tab.0.bottom" timestamp="1614580477044">
-      <screen x="0" y="25" width="1280" height="671" />
+    <state width="1638" height="436" key="GridCell.Tab.0.bottom" timestamp="1614746243371">
+      <screen x="0" y="23" width="1680" height="960" />
     </state>
     <state width="1238" height="210" key="GridCell.Tab.0.bottom/0.25.1280.671@0.25.1280.671" timestamp="1614580477044" />
-    <state width="1238" height="210" key="GridCell.Tab.0.center" timestamp="1614580477043">
-      <screen x="0" y="25" width="1280" height="671" />
+    <state width="1638" height="436" key="GridCell.Tab.0.bottom/1680.256.1366.745/0.23.1680.960@0.23.1680.960" timestamp="1614746243371" />
+    <state width="1638" height="436" key="GridCell.Tab.0.center" timestamp="1614746243370">
+      <screen x="0" y="23" width="1680" height="960" />
     </state>
     <state width="1238" height="210" key="GridCell.Tab.0.center/0.25.1280.671@0.25.1280.671" timestamp="1614580477043" />
-    <state width="1238" height="210" key="GridCell.Tab.0.left" timestamp="1614580477042">
-      <screen x="0" y="25" width="1280" height="671" />
+    <state width="1638" height="436" key="GridCell.Tab.0.center/1680.256.1366.745/0.23.1680.960@0.23.1680.960" timestamp="1614746243370" />
+    <state width="1638" height="436" key="GridCell.Tab.0.left" timestamp="1614746243370">
+      <screen x="0" y="23" width="1680" height="960" />
     </state>
     <state width="1238" height="210" key="GridCell.Tab.0.left/0.25.1280.671@0.25.1280.671" timestamp="1614580477042" />
-    <state width="1238" height="210" key="GridCell.Tab.0.right" timestamp="1614580477043">
-      <screen x="0" y="25" width="1280" height="671" />
+    <state width="1638" height="436" key="GridCell.Tab.0.left/1680.256.1366.745/0.23.1680.960@0.23.1680.960" timestamp="1614746243370" />
+    <state width="1638" height="436" key="GridCell.Tab.0.right" timestamp="1614746243370">
+      <screen x="0" y="23" width="1680" height="960" />
     </state>
     <state width="1238" height="210" key="GridCell.Tab.0.right/0.25.1280.671@0.25.1280.671" timestamp="1614580477043" />
+    <state width="1638" height="436" key="GridCell.Tab.0.right/1680.256.1366.745/0.23.1680.960@0.23.1680.960" timestamp="1614746243370" />
   </component>
 </project>

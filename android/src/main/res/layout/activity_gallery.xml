@@ -15,15 +15,4 @@
             android:gravity="center" >
         </GridView>
     </LinearLayout>
-    <Button
-        android:id="@+id/sendButton"
-        android:layout_width="54dp"
-        android:layout_height="54dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="10dp"
-        android:layout_marginRight="10dp"
-        android:rotationY="180"
-        android:visibility="visible"
-        android:background="@drawable/arrow_image" />
 </RelativeLayout>

@@ -246,8 +246,10 @@ public class GalleryActivity extends Activity {
     @Override
     public void onBackPressed() {
         setResult(Activity.RESULT_CANCELED, new Intent());
-        UtilProject.INSTANCE.getResult().success(null);
-        UtilProject.INSTANCE.onDestroy();
+        if(UtilProject.INSTANCE.getResult() != null) {
+            UtilProject.INSTANCE.getResult().success(null);
+            UtilProject.INSTANCE.onDestroy();
+        }
         finish();
     }
 }

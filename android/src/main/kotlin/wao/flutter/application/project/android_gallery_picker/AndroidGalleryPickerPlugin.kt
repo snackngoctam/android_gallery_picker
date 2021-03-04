@@ -77,7 +77,6 @@ object UtilProject {
   var webViewHeight:String? = null
 
   fun onDestroy() {
-    result = null
     colorAppBar = null
     titleAppBar = null
     webView = null

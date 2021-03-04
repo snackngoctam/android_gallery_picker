@@ -77,8 +77,10 @@ public class GalleryActivity extends Activity {
         send_button.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {
-                UtilProject.INSTANCE.getResult().success(multiImagesPicked);
-                UtilProject.INSTANCE.onDestroy();
+                if(UtilProject.INSTANCE.getResult() != null) {
+                    UtilProject.INSTANCE.getResult().success(multiImagesPicked);
+                    UtilProject.INSTANCE.onDestroy();
+                }
                 finish();
             }
 
@@ -88,8 +90,10 @@ public class GalleryActivity extends Activity {
             public void onItemClick(AdapterView<?> arg0, View arg1,
                                     int position, long arg3) {
                 if(UtilProject.INSTANCE.getMultiPick().equals("false")) {
-                    UtilProject.INSTANCE.getResult().success(images.get(position));
-                    UtilProject.INSTANCE.onDestroy();
+                    if(UtilProject.INSTANCE.getResult() != null) {
+                        UtilProject.INSTANCE.getResult().success(images.get(position));
+                        UtilProject.INSTANCE.onDestroy();
+                    }
                     finish();
                 }
                 else {

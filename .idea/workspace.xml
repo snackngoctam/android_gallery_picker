@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6cc17ec4-c0b2-483d-b612-99272b6146a3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/wao/flutter/application/project/android_gallery_picker/GalleryActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/wao/flutter/application/project/android_gallery_picker/GalleryActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/res/layout/activity_gallery.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/layout/activity_gallery.xml" afterDir="false" />
-    </list>
+    <list default="true" id="6cc17ec4-c0b2-483d-b612-99272b6146a3" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +10,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[R58MA5K7J5F]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[ce081718c38bc824037e]" />
   <component name="FindInProjectRecents">
     <findStrings>
       <find>android_gallery_picker</find>

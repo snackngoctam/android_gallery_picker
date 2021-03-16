@@ -30,8 +30,6 @@ flutter:
       android:
         package: wao.flutter.application.project.android_gallery_picker
         pluginClass: AndroidGalleryPickerPlugin
-      ios:
-        pluginClass: AndroidGalleryPickerPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

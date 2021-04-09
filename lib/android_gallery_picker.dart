@@ -10,7 +10,8 @@ class AndroidGalleryPicker {
           .invokeMethod<String>('gallery', {
         "multiPick": "false",
         "colorAppBar": colorAppBar ?? "#000000",
-        "titleAppBar": titleAppBar ?? ""
+        "titleAppBar": titleAppBar ?? "",
+        "limitMultiPick": "1"
       });
       if (event == null) return null;
       return File(event);

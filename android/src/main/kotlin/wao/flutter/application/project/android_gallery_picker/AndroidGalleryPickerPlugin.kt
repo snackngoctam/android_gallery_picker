@@ -38,7 +38,7 @@ class AndroidGalleryPickerPlugin: FlutterPlugin, MethodCallHandler, ActivityAwar
         var obj:Map<String,String>? = call.arguments()
         UtilProject.multiPick = obj!!["multiPick"]
         if(obj["limitMultiPick"] != null) {
-          UtilProject.limitMultiPick = (obj!!["limitMultiPick"].toInt())
+          UtilProject.limitMultiPick = (obj!!["limitMultiPick"])!!.toInt()
         }
         else {
           UtilProject.limitMultiPick = 3

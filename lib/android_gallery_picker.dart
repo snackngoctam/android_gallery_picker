@@ -4,9 +4,9 @@ import 'dart:io';
 import 'package:flutter/services.dart';
 
 class AndroidGalleryPicker {
-  static Future<File?> image({String? colorAppBar, String? titleAppBar}) async {
+  static Future<File> image({String colorAppBar, String titleAppBar}) async {
     if (Platform.isAndroid) {
-      String? event = await MethodChannel("flutter.io/gallery")
+      String event = await MethodChannel("flutter.io/gallery")
           .invokeMethod<String>('gallery', {
         "multiPick": "false",
         "colorAppBar": colorAppBar ?? "#000000",
@@ -20,10 +20,10 @@ class AndroidGalleryPicker {
     }
   }
 
-  static Future<List<File>?> images(
-      {String? colorAppBar, String? titleAppBar, int? limitMultiPick}) async {
+  static Future<List<File>> images(
+      {String colorAppBar, String titleAppBar, int limitMultiPick}) async {
     if (Platform.isAndroid) {
-      List<dynamic>? event = await MethodChannel("flutter.io/gallery")
+      List<dynamic> event = await MethodChannel("flutter.io/gallery")
           .invokeMethod<List<dynamic>>('gallery', {
         "multiPick": "true",
         "colorAppBar": colorAppBar ?? "#000000",
